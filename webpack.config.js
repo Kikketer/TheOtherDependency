@@ -3,14 +3,14 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   entry: {
-    Print: './src/print.js'
+    index: './index.js'
   },
   output: {
-    library: 'thedep',
+    library: 'theotherdep',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     filename: '[name].js',
-    path: path.resolve(__dirname)
+    path: path.resolve(__dirname, 'dist')
   },
   externals: ['react'],
   module: {
